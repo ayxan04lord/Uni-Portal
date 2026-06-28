@@ -1,7 +1,70 @@
-.myButton{
-    width: 40px;
-    height: 20px;
-    background: yellow;
-    text-align: center;
-    justify-content: center;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+  letter-spacing: 0.01em;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.btn--sm  { padding: 6px 14px;  font-size: 0.82rem; }
+.btn--md  { padding: 10px 22px; font-size: 0.95rem; }
+.btn--lg  { padding: 14px 32px; font-size: 1.05rem; }
+
+/* Variants */
+.btn--primary {
+  background: linear-gradient(135deg, var(--accent), #9b8cff);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(124, 106, 247, 0.35);
+}
+.btn--primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 106, 247, 0.5);
+}
+
+.btn--secondary {
+  background: var(--bg-card2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.btn--secondary:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.btn--danger {
+  background: linear-gradient(135deg, #ef4444, #f87171);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.3);
+}
+.btn--danger:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.45);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+.btn--ghost:hover:not(:disabled) {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn__icon {
+  font-size: 1.1em;
+  line-height: 1;
 }

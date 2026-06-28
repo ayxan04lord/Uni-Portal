@@ -1,0 +1,79 @@
+.exams-page { display: flex; flex-direction: column; gap: 32px; }
+.section-heading { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 14px; }
+
+.exams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.exam-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--ec);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s;
+}
+.exam-card:hover { transform: translateY(-2px); }
+
+.exam-card__top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+
+.exam-card__code {
+  font-size: 0.72rem; font-weight: 700;
+  color: var(--ec);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: block; margin-bottom: 3px;
+}
+
+.exam-card__title { font-size: 0.98rem; font-weight: 700; color: var(--text); margin: 0; }
+
+.exam-status {
+  font-size: 0.75rem; font-weight: 600;
+  padding: 3px 10px; border-radius: 99px;
+  white-space: nowrap;
+}
+.exam-status--scheduled { background: rgba(124,106,247,0.12); color: #7c6af7; }
+.exam-status--ongoing   { background: rgba(52,211,153,0.12);  color: #34d399; }
+.exam-status--completed { background: rgba(156,163,175,0.12); color: #9ca3af; }
+.exam-status--cancelled { background: rgba(239,68,68,0.12);   color: #f87171; }
+
+.exam-card__info {
+  display: flex; flex-direction: column; gap: 5px;
+  font-size: 0.84rem; color: var(--text-muted);
+}
+
+.exam-countdown {
+  background: rgba(124,106,247,0.08);
+  border: 1px solid rgba(124,106,247,0.2);
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-align: center;
+}
+.exam-countdown.urgent {
+  background: rgba(239,68,68,0.08);
+  border-color: rgba(239,68,68,0.2);
+  color: #f87171;
+}
+
+.exam-card__desc {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.empty-state {
+  text-align: center; padding: 48px;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+}

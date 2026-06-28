@@ -1,0 +1,113 @@
+.profile-page { display: flex; flex-direction: column; gap: 28px; }
+
+.profile-overview {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.overview-item { text-align: center; }
+
+.overview-val {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.overview-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 4px 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.overview-divider {
+  width: 1px; height: 48px;
+  background: var(--border);
+}
+
+.sem-block { display: flex; flex-direction: column; gap: 12px; }
+
+.sem-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  padding-left: 4px;
+}
+
+.sem-table-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.sem-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sem-table th {
+  background: var(--bg-card2);
+  padding: 11px 16px;
+  text-align: left;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.sem-table td {
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.sem-table tr:last-child td { border-bottom: none; }
+.sem-table tr:hover td { background: rgba(124,106,247,0.04); }
+
+.sub-code {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.score-val { font-weight: 700; }
+
+.letter-badge {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.att-pill {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 99px;
+}
+.att-pill.good { background: rgba(52,211,153,0.12); color: #34d399; }
+.att-pill.warn { background: rgba(245,158,11,0.12); color: #f59e0b; }
+.att-pill.bad  { background: rgba(239,68,68,0.12);  color: #f87171; }
+
+.empty-state {
+  text-align: center; padding: 60px;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+}

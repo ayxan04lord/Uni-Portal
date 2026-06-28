@@ -1,0 +1,63 @@
+.teacher-dashboard { display: flex; flex-direction: column; gap: 28px; }
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.stat-card__icon { font-size: 1.8rem; }
+.stat-card__val  { font-size: 1.5rem; font-weight: 800; color: var(--text); line-height:1; }
+.stat-card__label { font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+.section-heading { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+
+.teacher-subjects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.teacher-subject-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.teacher-subject-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.tsc-header { display: flex; justify-content: space-between; align-items: flex-start; }
+.tsc-code { font-size: 0.74rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 3px; }
+.tsc-name { font-size: 1.02rem; font-weight: 700; color: var(--text); margin: 0; }
+.tsc-credits {
+  background: var(--bg-card2); border: 1px solid var(--border);
+  border-radius: 6px; padding: 2px 8px;
+  font-size: 0.78rem; font-weight: 600; color: var(--text-muted);
+}
+.tsc-meta { display: flex; gap: 16px; font-size: 0.84rem; color: var(--text-muted); }
+.tsc-arrow { font-size: 0.85rem; font-weight: 600; color: var(--accent); }
+
+.empty-state {
+  text-align: center; padding: 60px 20px;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+}

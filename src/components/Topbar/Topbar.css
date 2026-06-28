@@ -1,0 +1,36 @@
+.topbar {
+  padding: 20px 32px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.topbar__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.topbar__date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 2px 0 0;
+  text-transform: capitalize;
+}
+
+.topbar__greeting {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  background: var(--bg-card2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 16px;
+}
+
+.topbar__greeting strong {
+  color: var(--accent);
+}
